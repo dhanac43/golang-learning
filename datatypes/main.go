@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"log"
+)
 
 func main() {
 
@@ -39,40 +41,45 @@ func main() {
 	//num := 100
 	//fmt.Println(num)
 
-	var age int = 30
-	name := "Dhana"
-	fmt.Println("Name:", name)
-	fmt.Println("Age:", age)
+	//var age int = 30
+	//name := "Dhana"
+	//fmt.Println("Name:", name)
+	//fmt.Println("Age:", age)
+	//
+	//var count int
+	//var price float64
+	//var username string
+	//var isAdmin bool
+	//
+	//fmt.Println("count:", count)
+	//fmt.Println("price:", price)
+	//fmt.Println("username:", username)
+	//fmt.Println("isAdmin:", isAdmin)
+	//
+	//const companyName = "River"
+	//fmt.Println("companyName:", companyName)
+	//const maxRetries = 3
+	//fmt.Println("maxRetries:", maxRetries)
+	//const apiVersion = "v1"
+	//fmt.Println("apiVersion:", apiVersion)
+	//
+	//const old = 30
+	//fmt.Println(old)
+	//
+	//productName := "Laptop"
+	//rate := 500.0
+	//quantity := 3
+	//
+	//total := rate * float64(quantity)
+	//
+	//fmt.Println("Product:", productName)
+	//fmt.Println("Rate:", rate)
+	//fmt.Println("Quantity:", quantity)
+	//fmt.Println("Total:", total)
 
-	var count int
-	var price float64
-	var username string
-	var isAdmin bool
+	marks := 35
 
-	fmt.Println("count:", count)
-	fmt.Println("price:", price)
-	fmt.Println("username:", username)
-	fmt.Println("isAdmin:", isAdmin)
-
-	const companyName = "River"
-	fmt.Println("companyName:", companyName)
-	const maxRetries = 3
-	fmt.Println("maxRetries:", maxRetries)
-	const apiVersion = "v1"
-	fmt.Println("apiVersion:", apiVersion)
-
-	const old = 30
-	fmt.Println(old)
-
-	productName := "Laptop"
-	rate := 500.0
-	quantity := 3
-
-	total := rate * float64(quantity)
-
-	fmt.Println("Product:", productName)
-	fmt.Println("Rate:", rate)
-	fmt.Println("Quantity:", quantity)
-	fmt.Println("Total:", total)
-
+	if marks >= 35 {
+		log.Println("pass marks")
+	}
 }
