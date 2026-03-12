@@ -35,4 +35,10 @@ func main() {
 	//Create an array of 5 integers and print the third element.
 	numbers := [5]int{10, 20, 30, 40, 50}
 	fmt.Println(numbers[2])
+
+	numbers1 := []int{10, 20, 30, 40, 50}
+	fmt.Println(numbers1)
+	numbers2 := numbers1[1:3]
+	fmt.Println(numbers2)
+
 }

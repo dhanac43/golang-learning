@@ -67,4 +67,5 @@ func main() {
 	numberSlice := make([]int, 2, 5)
 	fmt.Println("Length:", len(numberSlice))
 	fmt.Println("Capacity:", cap(numberSlice))
+
 }
