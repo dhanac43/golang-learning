@@ -10,7 +10,7 @@ func main() {
 	result := addInts(2, 3)
 	fmt.Println("result of addition of 2 + 3 is ", result)
 
-	fmt.Println("\n result of addition of 4 + 4 is %d", addInts(4, 4))
+	fmt.Printf("result of addition of 4 + 4 is %d\n", addInts(4, 4))
 
 	//var salary float32
 	//
