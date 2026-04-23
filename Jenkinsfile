@@ -2,10 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Go Deps') {
             steps {
-                echo 'Hello  from jenkins World'
+                sh 'go --version'
             }
         }
+        stage('Ginkgo') {
+                    steps {
+                        echo 'Hello  from jenkins World'
+                    }
+                }
     }
 }
