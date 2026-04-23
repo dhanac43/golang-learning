@@ -4,6 +4,12 @@ pipeline {
     go 'Gotool'
     }
 
+    environment {
+            // Set GOPATH and append its bin folder to the PATH
+            GOPATH = "${WORKSPACE}/go"
+            PATH = "${GOPATH}/bin:${env.PATH}"
+        }
+
     stages {
         stage('Go Deps') {
             steps {
