@@ -8,13 +8,13 @@ pipeline {
         stage('Go Deps') {
             steps {
                 sh 'go version'
-                sh 'make deps'
+                sh 'go mod download'
 
             }
         }
         stage('Ginkgo') {
                     steps {
-                        sh 'make functional-tests'
+                        sh 'ginkgo -v ./address-api-tests ./ginkgo-tests'
                     }
                 }
     }
