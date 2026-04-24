@@ -5,18 +5,20 @@ pipeline {
     }
 
     environment {
-            // Set GOPATH and append its bin folder to the PATH
-            GOPATH = "${WORKSPACE}/go"
-            PATH = "${GOPATH}/bin:${env.PATH}"
-        }
+                GOPATH = "${WORKSPACE}/go"
+                // Explicitly define GOBIN
+                GOBIN  = "${WORKSPACE}/go/bin"
+                // Add GOBIN to the system PATH
+                PATH   = "${GOBIN}:${env.PATH}"
+            }
 
     stages {
         stage('Go Deps') {
             steps {
                 sh 'go version'
                 sh 'go mod download'
-                sh 'go mod tidy'
-                sh 'go get github.com/onsi/ginkgo/v2/ginkgo'
+//                 sh 'go mod tidy'
+                sh 'go install -mod=mod github.com/onsi/ginkgo/v2/ginkgo'
 
             }
         }
